@@ -1,0 +1,280 @@
+
+/* =========================
+   General Settings
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        90deg,
+        rgba(26, 24, 24, 1) 19%,
+        rgba(130, 114, 8, 1) 49%,
+        rgba(26, 5, 5, 1) 81%
+    );
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   Main Container
+========================= */
+.all {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: stretch;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+    width: calc(33.333% - 20px);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid #637e68;
+    border-radius: 15px;
+    margin-top: 0;
+    padding: 10px;
+    box-shadow: 0 5px 20px 4px rgb(73 69 27 / 50%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow-wrap: anywhere;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px 5px rgb(73 69 27 / 70%);
+}
+
+/* =========================
+   Card Titles
+========================= */
+.card h2 {
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: gold;
+    border-bottom: 2px solid #637e68;
+    font-size: clamp(17px, 1.5vw, 24px);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   Small Reset Button
+========================= */
+.card button:nth-child(2) {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: gold;
+    border: 2px solid gold;
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 0 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card button:nth-child(2):hover {
+    transform: scale(1.1);
+    background-color: #292000;
+}
+
+/* =========================
+   Counter Button
+========================= */
+.card button:nth-child(3) {
+    width: clamp(100px, 10vw, 130px);
+    height: clamp(100px, 10vw, 130px);
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    background-color: gold;
+    color: black;
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: bold;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card button:nth-child(3):hover {
+    transform: scale(1.08);
+    background-color: #ffe866;
+}
+
+.card button:active,
+.reset button:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   Reset All Buttons
+========================= */
+.reset {
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset button {
+    min-width: 120px;
+    min-height: 40px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid gold;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: gold;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset button:hover {
+    background-color: black;
+    color: gold;
+}
+
+/* =========================
+   Tablets
+========================= */
+@media (max-width: 1024px) {
+    .all {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        min-height: 300px;
+    }
+
+    .card h2 {
+        font-size: clamp(17px, 2.2vw, 22px);
+    }
+
+    .card button:nth-child(3) {
+        width: 115px;
+        height: 115px;
+        min-width: 115px;
+        min-height: 115px;
+    }
+}
+
+/* =========================
+   Mobile Phones
+========================= */
+@media (max-width: 600px) {
+    .all {
+        padding: 12px;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 270px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .card h2 {
+        min-height: 75px;
+        font-size: clamp(17px, 5vw, 22px);
+        line-height: 1.6;
+        padding: 12px 8px;
+    }
+
+    .card button:nth-child(2) {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        margin: 5px 8px;
+        font-size: 12px;
+    }
+
+    .card button:nth-child(3) {
+        width: 110px;
+        height: 110px;
+        min-width: 110px;
+        min-height: 110px;
+        font-size: 30px;
+    }
+
+    .reset {
+        min-height: 55px;
+    }
+
+    .reset button {
+        min-width: 130px;
+        min-height: 42px;
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   Very Small Phones
+========================= */
+@media (max-width: 360px) {
+    .all {
+        padding: 8px;
+        gap: 12px;
+    }
+
+    .card {
+        min-height: 250px;
+        padding: 8px;
+    }
+
+    .card h2 {
+        font-size: 16px;
+        min-height: 70px;
+    }
+
+    .card button:nth-child(2) {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+
+    .card button:nth-child(3) {
+        width: 95px;
+        height: 95px;
+        min-width: 95px;
+        min-height: 95px;
+        font-size: 26px;
+    }
+}
+
+/* =========================
+   Reduce Motion
+========================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
