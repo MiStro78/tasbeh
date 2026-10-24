@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profite</title>
+    <link rel="stylesheet" href="css/profite.css">
+</head>
+<body>
+    <h1>حساب الارباح</h1>
+    <h3>احسب ارباحك بسهولة</h3>
+    <div class="product-name">
+        <label for="product-name"><h3>اسم المنتج</h3></label>
+        <input type="text" id="product-name" placeholder="مثال: iPhone 17 Pro">
+    </div>
+    <div class="product-img">
+        <label for="product-img">صورة المنتج</label>
+       <input type="url" name="" id="product-img" placeholder="Https//example.com/Image.jpg">
+    </div>
+    <div class="buy-price">
+        <label for="buy-price">سعر الشراء</label>
+        <input type="number" name="" id="buy-price" placeholder="مثال: 200">
+    </div>
+    <div class="sell-price">
+        <label for="sell-price">سعر البيع</label>
+        <input type="number" name="" id="sell-price" placeholder="مثال: 220">
+    </div>
+    <div class="button-counter">
+        <button onclick="count()">احسب ارباحك</button>
+    </div>
+    <table id="product-table">
+        <thead><tr>
+            <th>صورة النتج</th>
+            <th>اسم المنتج</th>
+            <th>سعر الشراء</th>
+            <th>سعر البيع</th>
+            <th>الربح</th>
+        </tr></thead>
+        <tbody>
+            <tr>
+            <th id="img-result"></th>
+            <th id="name-result"></th>
+            <th id="buy-result"></th>
+            <th id="sell-result"></th>
+            <th id="profite-result"></th>
+        </tr>
+        </tbody>
+    </table>
+    <script src="js/profite.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

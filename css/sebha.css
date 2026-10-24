@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(124, 172, 133);
+}
+.parant{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sebha{
+    width: 25%;
+    height: 450px;
+    background-color: green;
+    border: 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: -40px;
+    border-radius: 30px;
+    animation-name: move;
+    animation-duration: 3s;
+} 
+@keyframes move{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 50%;
+    }
+}
+
+.sebha .display{
+    width: 80%;
+    height: 100px;
+    text-align: center;
+    font-size: 90px;
+    margin: auto;
+    background-color: rgb(0, 56, 0);
+    margin-top: 50px;
+    border-radius: 20px;
+    border: 10px solid rgb(114, 230, 114);
+    color: green ;
+}
+.sebha button:nth-child(2){
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: xx-large;
+    text-align: center;
+    color: green ;
+    border: 10px solid rgb(114, 230, 114);
+    margin-top: 80px;
+    font-weight: bolder;
+}
+.sebha button:nth-child(3){
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 50px;
+    color: green ;
+    border: 10px solid rgb(114, 230, 114);
+    font-size: larger;
+}
+.sebha button{
+    margin-top: 80px;
+    background-color: rgb(0, 56, 0);
+    transition: 0.5s;
+}
+.sebha button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

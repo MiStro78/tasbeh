@@ -1,0 +1,57 @@
+
+
+
+
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #e0eafc, #cfdef3); min-height: 100vh; padding: 40px 20px; color: #263238; }
+
+/* Form inputs */ body > input { display: block; width: 100%; max-width: 500px; margin: 12px auto; padding: 14px 16px; border: 1px solid #ccd5e0; border-radius: 10px; outline: none; background: #fff; font-size: 16px; transition: 0.3s; }
+
+body > input:focus { border-color: #4361ee; box-shadow: 0 0 8px rgba(67, 97, 238, 0.25); }
+
+/* Add / Update button container */ #butn { max-width: 500px; margin: 18px auto 30px; }
+
+#butn button { width: 100%; padding: 14px; border: none; border-radius: 10px; background: #4361ee; color: white; font-size: 17px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+
+#butn button:hover { background: #3046c5; transform: translateY(-2px); }
+
+/* Table */ table { width: 100%; max-width: 1100px; margin: 0 auto; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+
+thead { background: #263b80; color: white; }
+
+th, td { padding: 15px 12px; text-align: center; border-bottom: 1px solid #e8edf3; }
+
+thead th { font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+tbody tr { transition: 0.2s; }
+
+tbody tr:hover { background: #f0f4ff; }
+
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: none; }
+
+/* Student images */ table img { width: 65px; height: 65px; object-fit: cover; border-radius: 50%; border: 3px solid #dbe4ff; display: block; margin: auto; }
+
+/* Edit and Delete buttons */ table button { padding: 9px 15px; border: none; border-radius: 7px; color: white; font-size: 14px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+
+table button:hover { transform: scale(1.05); }
+
+table button:active { transform: scale(0.97); }
+
+/* Edit button */ table button[onclick^="edit"] { background: #f4a62a; }
+
+table button[onclick^="edit"]:hover { background: #d98b0b; }
+
+/* Delete button */ table button[onclick^="del"] { background: #e63946; }
+
+table button[onclick^="del"]:hover { background: #c1121f; }
+
+/* Responsive design */ @media (max-width: 700px) { body { padding: 20px 10px; }
+
+table { font-size: 13px; }
+
+th, td { padding: 10px 6px; }
+
+table img { width: 45px; height: 45px; }
+
+table button { padding: 7px 9px; font-size: 12px; }
+
+thead th { font-size: 11px; } }

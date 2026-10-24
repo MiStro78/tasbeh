@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/crud.css">
+</head>
+<body>
+    <input type="text" name="" id="name" placeholder="please enter your name">
+    <input type="text" name="" id="age" placeholder="please enter your age">
+    <input type="text" name="" id="job" placeholder="please enter your job">
+    <input type="url" name="" id="img" placeholder="Https//example.com/Image.jpg">
+    <div id="butn">
+        <button onclick="add()">add</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+                <th>job</th>
+                <th>img</th>
+                <th>edit</th>
+                <th>delet</th>
+            </tr>
+        </thead>
+        <tbody id="tbl">
+
+        </tbody>
+    </table>
+    <script src="js/crud.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
